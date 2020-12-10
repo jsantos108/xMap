@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-between">
+  <form class="form-inline">
+    <button type="button" class="btn btn-light btn" (click)="allMarkers()">
+      All
+    </button>
+    <button type="button" class="btn btn-light btn" (click)="showSafe()">
+      Safe
+    </button>
+    <button type="button" class="btn btn-light btn" (click)="showTrending()">
+      Trending
+    </button>
+    <button type="button" class="btn btn-light btn" (click)="showChronic()">
+      Chronic
+    </button>
+    <button type="button" class="btn btn-light btn" (click)="showBusstops()">
+      Bus Stops
+    </button>
+    <select id="grades" class="form-control" (change)="showGrade($event)">
+      <option value="1">All Grades</option>
+      <option value="9">Grade 9</option>
+      <option value="10">Grade 10</option>
+      <option value="11">Grade 11</option>
+      <option value="12">Grade 12</option>
+    </select>
+  </form>
+  <div class="form-inline">
+    <input
+      id="searchName"
+      type="name"
+      class="form-control"
+      placeholder="Search Name"
+    />
+    <button type="submit" class="btn btn-light" (click)="getPerson()">
+      Submit
+    </button>
+  </div>
+</div>
+<div id="map" style="height: 80vh;"></div>
